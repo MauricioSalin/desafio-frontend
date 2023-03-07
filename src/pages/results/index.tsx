@@ -1,22 +1,22 @@
-import { searchVideos } from "@/pages/api";
-import { NextPage, GetServerSideProps } from "next";
-
-/**
- * Types
- */
-import { Video } from "@/types/videos";
+import { searchVideos } from '@/pages/api'
+import { NextPage, GetServerSideProps } from 'next'
 
 /**
  * Components
  */
-import Thumbnails from "@/components/Thumbnails";
+import Thumbnails from '@/components/Thumbnails'
+
+/**
+ * Types
+ */
+import { Video } from '@/types/videos'
 
 interface Props {
-  foundVideos: Video[];
-  searchQuery: string;
+  foundVideos: Video[]
+  searchQuery: string
 }
 
-const Home: NextPage<Props> = ({ foundVideos, searchQuery }) => {
+const Results: NextPage<Props> = ({ foundVideos, searchQuery }) => {
   return (
     <>
       <main className="container">
@@ -73,21 +73,21 @@ const Home: NextPage<Props> = ({ foundVideos, searchQuery }) => {
         }
       `}</style>
     </>
-  );
-};
+  )
+}
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  const { data: foundVideos } = await searchVideos(query.searchQuery as string);
+  const { data: foundVideos } = await searchVideos(query.searchQuery as string)
 
   return {
     props: {
       ...(query &&
         query.searchQuery && {
           foundVideos: foundVideos.items,
-          searchQuery: query.searchQuery,
-        }),
-    },
-  };
-};
+          searchQuery: query.searchQuery
+        })
+    }
+  }
+}
 
-export default Home;
+export default Results

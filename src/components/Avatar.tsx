@@ -1,16 +1,19 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react'
+import Image from 'next/image'
 
-import { MdPerson } from "react-icons/md";
+/**
+ * Icons
+ */
+import { MdPerson } from 'react-icons/md'
 
 /**
  * Types
  */
 type Props = {
-  imageUrl?: string;
-  size?: number;
-  isLogin?: boolean;
-};
+  imageUrl?: string
+  size?: number
+  isLogin?: boolean
+}
 
 const Avatar: React.FC<Props> = ({ size = 40, imageUrl, isLogin = false }) => {
   return (
@@ -37,7 +40,7 @@ const Avatar: React.FC<Props> = ({ size = 40, imageUrl, isLogin = false }) => {
           {imageUrl ? (
             <Image src={imageUrl} alt="user" unoptimized />
           ) : (
-            <MdPerson size={size} />
+            <MdPerson size={size - 10} />
           )}
         </span>
       </span>
@@ -75,7 +78,7 @@ const Avatar: React.FC<Props> = ({ size = 40, imageUrl, isLogin = false }) => {
         }
 
         .avatar-content:after {
-          content: "";
+          content: '';
           position: absolute;
           top: -1px;
           left: -1px;
@@ -97,7 +100,7 @@ const Avatar: React.FC<Props> = ({ size = 40, imageUrl, isLogin = false }) => {
         }
       `}</style>
     </div>
-  );
-};
+  )
+}
 
-export default Avatar;
+export default Avatar

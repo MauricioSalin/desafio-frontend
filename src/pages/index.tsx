@@ -1,47 +1,53 @@
-import { searchMostPopularVideos, searchVideos } from "@/pages/api";
-import { NextPage, GetStaticProps } from "next";
-
-/**
- * Types
- */
-import { Video } from "@/types/videos";
+import { searchMostPopularVideos, searchVideos } from '@/pages/api'
+import { NextPage, GetStaticProps } from 'next'
 
 /**
  * Components
  */
-import VideoSection from "@/components/VideoSection";
+import VideoSection from '@/components/VideoSection'
+
+/**
+ * Types
+ */
+import { Video } from '@/types/videos'
 
 interface Props {
-  initialVideos: Video[];
-  soccerVideos: Video[];
-  policyVideos: Video[];
+  initialVideos: Video[]
+  soccerVideos: Video[]
+  policyVideos: Video[]
 }
 
 const Home: NextPage<Props> = ({
   initialVideos,
   soccerVideos,
-  policyVideos,
+  policyVideos
 }) => {
   return (
     <>
       <main className="container">
-        <VideoSection
-          title="Most popular"
-          description="The most viewed videos today"
-          videos={initialVideos}
-        />
+        {initialVideos.length > 0 && (
+          <VideoSection
+            title="Most popular"
+            description="The most viewed videos today"
+            videos={initialVideos}
+          />
+        )}
 
-        <VideoSection
-          title="Soccer"
-          description=" Most accessed videos about soccer"
-          videos={soccerVideos}
-        />
+        {soccerVideos.length > 0 && (
+          <VideoSection
+            title="Soccer"
+            description=" Most accessed videos about soccer"
+            videos={soccerVideos}
+          />
+        )}
 
-        <VideoSection
-          title="Policy"
-          description="What are talking about politics"
-          videos={policyVideos}
-        />
+        {policyVideos.length > 0 && (
+          <VideoSection
+            title="Policy"
+            description="What are talking about politics"
+            videos={policyVideos}
+          />
+        )}
       </main>
 
       <style jsx>{`
@@ -66,7 +72,6 @@ const Home: NextPage<Props> = ({
         .section-divider {
           border-top: 4px solid #0000001a;
           width: 100%;
-          display: flexbox;
           display: flex;
           flex-direction: row;
           justify-content: center;
@@ -80,33 +85,33 @@ const Home: NextPage<Props> = ({
         }
       `}</style>
     </>
-  );
-};
+  )
+}
 
 export const getStaticProps: GetStaticProps = async () => {
   const [
     {
-      data: { items: initialVideos },
+      data: { items: initialVideos }
     },
     {
-      data: { items: soccerVideos },
+      data: { items: soccerVideos }
     },
     {
-      data: { items: policyVideos },
-    },
+      data: { items: policyVideos }
+    }
   ] = await Promise.all([
     searchMostPopularVideos(),
-    searchVideos("soccer"),
-    searchVideos("policy"),
-  ]);
+    searchVideos('soccer'),
+    searchVideos('policy')
+  ])
 
   return {
     props: {
-      initialVideos,
-      soccerVideos,
-      policyVideos,
-    },
-  };
-};
+      initialVideos: [],
+      soccerVideos: [],
+      policyVideos: []
+    }
+  }
+}
 
-export default Home;
+export default Home

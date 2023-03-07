@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Logo: React.FC = () => {
   return (
@@ -8,9 +8,9 @@ const Logo: React.FC = () => {
       focusable="false"
       className="style-scope yt-icon"
       style={{
-        pointerEvents: "none",
-        display: "block",
-        width: "100px",
+        pointerEvents: 'none',
+        display: 'block',
+        width: '100px'
       }}
     >
       <g
@@ -64,7 +64,7 @@ const Logo: React.FC = () => {
         </g>
       </g>
     </svg>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo

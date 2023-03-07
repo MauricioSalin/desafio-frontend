@@ -1,34 +1,34 @@
-import React, { useState } from "react";
-import { useRouter } from "next/router";
+import React, { useState } from 'react'
+import { useRouter } from 'next/router'
 
 /**
  * Icons
  */
-import { TfiSearch } from "react-icons/tfi";
+import { TfiSearch } from 'react-icons/tfi'
 
 /**
  * Components
  */
-import Input from "./Input";
+import Input from './Input'
 
 const InputSearch: React.FC = () => {
-  const [value, setValue] = useState("");
-  const router = useRouter();
+  const [value, setValue] = useState('')
+  const router = useRouter()
 
   const onSearch = () => {
     if (value.length) {
       const href = {
         pathname: `/results`,
         query: {
-          searchQuery: value,
-        },
-      };
+          searchQuery: value
+        }
+      }
 
-      const as = `/results?searchQuery=${value}`;
+      const as = `/results?searchQuery=${value}`
 
-      router.push(href, as);
+      router.push(href, as)
     }
-  };
+  }
 
   return (
     <div className="input-search">
@@ -68,7 +68,7 @@ const InputSearch: React.FC = () => {
         }
       `}</style>
     </div>
-  );
-};
+  )
+}
 
-export default InputSearch;
+export default InputSearch

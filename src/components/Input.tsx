@@ -1,14 +1,14 @@
-import React, { InputHTMLAttributes } from "react";
+import React, { InputHTMLAttributes } from 'react'
 
 /**
  * Styles
  */
-import theme from "@/styles/theme";
+import theme from '@/styles/theme'
 
 /**
  * Types
  */
-export type Ref = HTMLInputElement;
+export type Ref = HTMLInputElement
 
 const Input: React.FC<InputHTMLAttributes<HTMLInputElement>> = ({
   ...inputProps
@@ -47,9 +47,9 @@ const Input: React.FC<InputHTMLAttributes<HTMLInputElement>> = ({
         }
       `}</style>
     </div>
-  );
-};
+  )
+}
 
-Input.displayName = "Input";
+Input.displayName = 'Input'
 
-export default Input;
+export default Input

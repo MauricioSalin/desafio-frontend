@@ -1,17 +1,17 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react'
+import Link from 'next/link'
 
 /**
  * Components
  */
-import Logo from "./Logo";
-import InputSearch from "./InputSearch";
+import Logo from './Logo'
+import InputSearch from './InputSearch'
 
 /**
  * Styles
  */
-import theme from "@/styles/theme";
-import Avatar from "./Avatar";
+import theme from '@/styles/theme'
+import Avatar from './Avatar'
 
 const Nav: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ const Nav: React.FC = () => {
             <Logo />
           </Link>
           <InputSearch />
-          <Avatar size={32} isLogin />
+          <Avatar size={34} isLogin />
         </div>
       </nav>
 
@@ -48,7 +48,7 @@ const Nav: React.FC = () => {
         }
       `}</style>
     </>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav
