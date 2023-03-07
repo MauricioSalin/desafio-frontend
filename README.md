@@ -14,25 +14,66 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+# 🏁 Desafio de programação - Vaga Front-End 🏁
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+**Este teste tem por objetivos principais avaliar:**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Habilidades no desenvolvimento frontend
+- Conceitos de UI e UX aplicados
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+## Instruções
 
-To learn more about Next.js, take a look at the following resources:
+- Primeiro, faça um fork deste projeto para sua conta no Github (crie uma se você não possuir).
+- Em seguida, implemente o projeto tal qual descrito abaixo, em seu clone local.
+- Por fim, envie via email um arquivo patch para seu contato na Bycoders\_.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Desafio 🚀 🚀 🚀
 
-## Deploy on Vercel
+![screen](/image.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+O desafio consiste em criar um projeto com o design da imagem **acima**, utilizando a [API do YouTube](https://developers.google.com/youtube/v3)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Utilize a [documentação](https://developers.google.com/youtube/v3/docs) para se orientar em como criar uma conta, logar no app, listar os vídeos do usuário, se inscrever em canais, enviar vídeos, ou o que mais você precisar.
+
+O layout da **home** não precisa ser exatamente como o do wireframe. Você pode ficar a vontade para exibir os conteúdos/vídeos que achar melhor, desde que qualquer informação (vídeo, texto, cores, imagens) sejam exibidos de maneira organizada e bem distribuida entre a tela, fornecendo uma boa experiência para o usuário.
+
+**Antes de iniciar o teste**
+
+1. Crie um projeto no [console de desenvolvedor](https://console.developers.google.com/projectcreate) da **Google**
+2. Ative a [YouTube Data API v3](https://console.developers.google.com/apis/api/youtube.googleapis.com/overview) nele
+3. Crie uma credencial de acesso para que seu app possa se comunicar com a API
+
+**Requisitos esperados na entrega do teste**
+
+- [ ] Fornecer um mecanismo para o usuário poder pesquisar vídeos
+- [ ] Possuir home page que exiba algum conteúdo interessante para uma plataforma de vídeos
+- [ ] Fornecer uma estrutura de gerência do estado da aplicação
+- [ ] Possuir histórico das buscas realizadas (persistir localmente)
+
+**Requisitos extras**
+
+- [ ] Permitir cadastro de usuário / login através da API do YouTube + OAuth2
+- [ ] Permitir upload de vídeo para a API do YouTube
+
+---
+
+## Pontos principais
+
+- Clean code
+- Conhecimento de boas práticas / design patterns
+- Demonstração de boa gestão do estado do app
+
+---
+
+## Pontos extras
+
+- Uso de frameworks / libs
+- Testes
+- Componetização do app
+- Uso de linters
+
+---
