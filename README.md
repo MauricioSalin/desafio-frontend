@@ -33,7 +33,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Desafio 🚀 🚀 🚀
 
-![screen](/image.png)
+![image](https://user-images.githubusercontent.com/13355144/223303378-15963994-5a52-46ce-a5a3-c0ceb1e6720d.png)
 
 O desafio consiste em criar um projeto com o design da imagem **acima**, utilizando a [API do YouTube](https://developers.google.com/youtube/v3)
 
