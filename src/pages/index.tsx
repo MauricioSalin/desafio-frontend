@@ -1,9 +1,14 @@
 import { searchMostPopularVideos, searchVideos } from "@/pages/api";
-import { useEffect } from "react";
 import { NextPage, GetStaticProps } from "next";
 
+/**
+ * Types
+ */
 import { Video } from "@/types/videos";
-import Thumbnails from "@/components/Thumbnails";
+
+/**
+ * Components
+ */
 import VideoSection from "@/components/VideoSection";
 
 interface Props {

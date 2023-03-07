@@ -1,11 +1,34 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 
+/**
+ * Icons
+ */
 import { TfiSearch } from "react-icons/tfi";
 
+/**
+ * Components
+ */
 import Input from "./Input";
 
 const InputSearch: React.FC = () => {
   const [value, setValue] = useState("");
+  const router = useRouter();
+
+  const onSearch = () => {
+    if (value.length) {
+      const href = {
+        pathname: `/results`,
+        query: {
+          searchQuery: value,
+        },
+      };
+
+      const as = `/results?searchQuery=${value}`;
+
+      router.push(href, as);
+    }
+  };
 
   return (
     <div className="input-search">
@@ -18,7 +41,7 @@ const InputSearch: React.FC = () => {
         placeholder="Search"
       />
 
-      <button className="search-button">
+      <button className="search-button" onClick={onSearch}>
         <TfiSearch size={18} />
       </button>
 

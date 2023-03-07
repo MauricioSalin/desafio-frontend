@@ -4,15 +4,6 @@ import Image from "next/image";
 import { MdPerson } from "react-icons/md";
 
 /**
- * Components
- */
-
-/**
- * Styles
- */
-import theme from "@/styles/theme";
-
-/**
  * Types
  */
 type Props = {

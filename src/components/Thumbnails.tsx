@@ -1,9 +1,14 @@
 import React from "react";
-
 import Link from "next/link";
-import Image from "next/image";
 
+/**
+ * Types
+ */
 import { Snippet } from "@/types/videos";
+
+/**
+ * Components
+ */
 import Avatar from "./Avatar";
 
 interface Props {

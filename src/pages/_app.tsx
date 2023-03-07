@@ -5,12 +5,12 @@ import type { AppProps } from "next/app";
 /**
  * Components
  */
-import Nav from "@/components/Nav";
+import Layout from "@/components/Layout";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Nav {...pageProps}>
+    <Layout {...pageProps}>
       <Component {...pageProps} />
-    </Nav>
+    </Layout>
   );
 }
