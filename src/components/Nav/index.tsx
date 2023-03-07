@@ -1,26 +1,20 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
 
 /**
  * Components
  */
-import Logo from './Logo'
-import InputSearch from './InputSearch'
-
-/**
- * Styles
- */
-import theme from '@/styles/theme'
-import Avatar from './Avatar'
+import Logo from '../Logo';
+import Avatar from '../Avatar';
+import InputSearch from '../Search';
 
 const Nav: React.FC = () => {
   return (
     <>
       <nav className="nav-container">
         <div className="nav-wrapper">
-          <Link href="/">
+          <a href="/">
             <Logo />
-          </Link>
+          </a>
           <InputSearch />
           <Avatar size={34} isLogin />
         </div>
@@ -34,7 +28,6 @@ const Nav: React.FC = () => {
           left: 0;
           width: 100%;
           min-height: 64px;
-          color: ${theme.colors.base};
         }
 
         .nav-wrapper {
@@ -44,11 +37,11 @@ const Nav: React.FC = () => {
           padding-top: 12px;
           padding-bottom: 12px;
           padding: 10px 20px 10px 76px;
-          background-color: ${theme.colors.white};
+          background-color: #fff;
         }
       `}</style>
     </>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;

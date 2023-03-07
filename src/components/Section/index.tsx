@@ -1,19 +1,19 @@
-import React from 'react'
+import React from 'react';
 
 /**
  * Components
  */
-import Thumbnails from '@/components/Thumbnails'
+import Thumbnails from '@/components/Thumbnails';
 
 /**
  * Types
  */
-import { Video } from '@/types/videos'
+import { Video } from '@/types/videos';
 
 interface Props {
-  title: string
-  description: string
-  videos: Video[]
+  title: string;
+  description: string;
+  videos?: Video[];
 }
 
 const VideoSection: React.FC<Props> = ({ title, description, videos }) => {
@@ -60,7 +60,7 @@ const VideoSection: React.FC<Props> = ({ title, description, videos }) => {
         }
       `}</style>
     </>
-  )
-}
+  );
+};
 
-export default VideoSection
+export default VideoSection;

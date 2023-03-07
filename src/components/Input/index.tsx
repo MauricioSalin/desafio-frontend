@@ -1,14 +1,9 @@
-import React, { InputHTMLAttributes } from 'react'
-
-/**
- * Styles
- */
-import theme from '@/styles/theme'
+import React, { InputHTMLAttributes } from 'react';
 
 /**
  * Types
  */
-export type Ref = HTMLInputElement
+export type Ref = HTMLInputElement;
 
 const Input: React.FC<InputHTMLAttributes<HTMLInputElement>> = ({
   ...inputProps
@@ -43,13 +38,13 @@ const Input: React.FC<InputHTMLAttributes<HTMLInputElement>> = ({
         }
 
         input:focus {
-          border-color: ${theme.colors.secondary};
+          border-color: #ccc;
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
-Input.displayName = 'Input'
+Input.displayName = 'Input';
 
-export default Input
+export default Input;

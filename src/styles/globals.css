@@ -22,3 +22,8 @@ body {
   font-family: 'Roboto';
   overflow: auto;
 }
+
+.container {
+  padding: 84px 60px 60px 60px;
+  width: 100%;
+}

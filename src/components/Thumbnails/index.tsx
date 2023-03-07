@@ -1,19 +1,19 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 
 /**
  * Components
  */
-import Avatar from './Avatar'
+import Avatar from '../Avatar';
 
 /**
  * Types
  */
-import { Snippet } from '@/types/videos'
+import { Snippet } from '@/types/videos';
 
 interface Props {
-  snippet: Snippet
-  videoId: string
+  snippet: Snippet;
+  videoId: string;
 }
 
 const Thumbnails: React.FC<Props> = ({ snippet, videoId }) => {
@@ -93,7 +93,7 @@ const Thumbnails: React.FC<Props> = ({ snippet, videoId }) => {
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default Thumbnails
+export default Thumbnails;

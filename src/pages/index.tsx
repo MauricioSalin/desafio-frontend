@@ -1,20 +1,20 @@
-import { searchMostPopularVideos, searchVideos } from '@/pages/api'
-import { NextPage, GetStaticProps } from 'next'
+import { searchMostPopularVideos, searchVideos } from '@/pages/api';
+import { NextPage, GetStaticProps } from 'next';
 
 /**
  * Components
  */
-import VideoSection from '@/components/VideoSection'
+import VideoSection from '@/components/Section';
 
 /**
  * Types
  */
-import { Video } from '@/types/videos'
+import { Video } from '@/types/videos';
 
 interface Props {
-  initialVideos: Video[]
-  soccerVideos: Video[]
-  policyVideos: Video[]
+  initialVideos: Video[];
+  soccerVideos: Video[];
+  policyVideos: Video[];
 }
 
 const Home: NextPage<Props> = ({
@@ -49,44 +49,9 @@ const Home: NextPage<Props> = ({
           />
         )}
       </main>
-
-      <style jsx>{`
-        .container {
-          padding: 84px 60px 60px 60px;
-          width: 100%;
-        }
-
-        .section-title {
-          font-size: 20px;
-          padding-left: 16px;
-          font-weight: 500;
-          margin: 0;
-        }
-
-        .section-description {
-          font-size: 14px;
-          color: #606060;
-          padding-left: 16px;
-        }
-
-        .section-divider {
-          border-top: 4px solid #0000001a;
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          margin-bottom: 20px;
-        }
-
-        .videos-container {
-          display: flex;
-          flex-wrap: wrap;
-          width: 100%;
-        }
-      `}</style>
     </>
-  )
-}
+  );
+};
 
 export const getStaticProps: GetStaticProps = async () => {
   const [
@@ -103,15 +68,15 @@ export const getStaticProps: GetStaticProps = async () => {
     searchMostPopularVideos(),
     searchVideos('soccer'),
     searchVideos('policy')
-  ])
+  ]);
 
   return {
     props: {
-      initialVideos: [],
-      soccerVideos: [],
-      policyVideos: []
+      initialVideos,
+      soccerVideos,
+      policyVideos
     }
-  }
-}
+  };
+};
 
-export default Home
+export default Home;
