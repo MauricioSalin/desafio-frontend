@@ -1,18 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ▶️ MVP - YouTube
 
-## Getting Started
+## Funcionalidades
 
-First, run the development server:
+- ✅ Home com videos mais populares
+- ✅ Mecanismo de busca de videos
+- ✅ Página de videos filtrados
+- ✅ Histórico de busca
+
+## Como foi desenvolvido?
+
+- ✅ Utilizando Next.js com TypeScript
+- ✅ Fetch de conteúdo Server Side (getServerSideProps)
+- ✅ Gerenciamento de estado via hooks
+- ✅ Criação de hook para armazenamento de cache
+- ✅ Api para requisições utilizando Axios
+
+## Como visualizar o desafio?
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
+# ou
 pnpm dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
 
 # 🏁 Desafio de programação - Vaga Front-End 🏁
 
